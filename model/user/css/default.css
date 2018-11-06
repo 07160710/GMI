@@ -1,0 +1,243 @@
+/* DEFAULT */
+.layout_opt_holder{
+	float:left;
+	margin:0 10px 5px 0;
+}
+.layout_opt_holder label{padding:0 !important;}
+.icon_layout{
+	width:23px;
+	height:25px;
+	padding-left:0 !important;
+	margin-left:5px;
+	cursor:pointer;
+}
+.icon_layout.one_col{
+	background:url('layout_icon.png') 0 0;
+}
+.icon_layout.two_col_50_50{
+	background:url('layout_icon.png') -23px 0;
+}
+.icon_layout.two_col_30_70{
+	background:url('layout_icon.png') -46px 0;
+}
+.icon_layout.two_col_70_30{
+	background:url('layout_icon.png') -69px 0;
+}
+.icon_layout.one_two_col_30_70{
+	background:url('layout_icon.png') -92px 0;
+}
+.icon_layout.one_two_col_70_30{
+	background:url('layout_icon.png') -115px 0;
+}
+.icon_layout.two_two_col{
+	background:url('layout_icon.png') -138px 0;
+}
+.icon_layout.three_col{
+	background:url('layout_icon.png') -161px 0;
+}
+
+#layout_preview{
+	width:480px;
+	padding:5px;
+	border:1px solid #999999;
+	background:#fff;
+	float:left;
+}
+#layout_preview.one_third{
+	width:157px;
+}
+#layout_preview.half{
+	width:238px;
+}
+.layout_row{
+	float:left;
+	width:100%;
+	height:100%;
+	margin-top:5px;
+}
+.layout_row:first-child{
+	margin-top:0;
+}
+
+.layout{
+	float:left;
+	padding:10px;
+	min-height:270px;
+	border:1px dashed #cccccc;
+	position:relative;
+}
+.layout.whole{
+	width:458px;	
+}
+.layout.half{
+	width:215.5px;
+	margin-left:5px;
+}
+.layout.one_third{
+	width:134.5px;
+	margin-left:5px;
+}
+.layout.two_third{
+	width:296.5px;
+	margin-left:5px;
+}
+.layout:first-child{
+	margin-left:0;
+}
+
+.layout_row.half .layout{
+	min-height:135px;
+}
+.layout_row.one_third .layout{
+	min-height:90px;
+}
+.layout_row.two_third .layout{
+	min-height:180px;
+}
+.layout.over{
+	border: 1px dashed #ffe899;
+}
+.layout .node_holder:hover{
+	border: 1px solid #ffe899;
+	background: #fef3ce;
+}
+
+.layout .legend{
+	width:100%;
+	position:absolute;
+	top:-6px;
+	left:0;
+	text-align:center;
+	font-size:10px;
+	line-height:10px;
+}
+.layout .legend div{
+	display:inline-block;
+	background:#fff;
+	margin:0 auto;
+	padding:0 5px;	
+	color:#c3c3c3;
+	cursor:default;
+	line-height:15px;
+}
+#layout_header,#layout_footer{
+	min-height:30px;
+}
+#layout_header{
+	margin-bottom:5px;
+}
+#layout_footer{
+	margin-top:5px;
+}
+
+.layout .node_holder{	
+	position:relative;
+	border: 1px solid #ffe899;
+	background: #fff9e6;
+	margin-top:5px;
+}
+#layout_header .node_holder,#layout_footer .node_holder{
+	width:146.5px;
+	float:left;
+	margin:5px 2px 0 2px;
+}
+.layout .node_link{
+	display:block;
+	height: 22px;
+	line-height: 22px;	
+	color:#666;	
+	text-indent:5px;
+	position:relative;
+	z-index:2;
+	margin-right:20px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+.layout a.remove{
+	width:16px;
+	height:22px;
+	line-height:22px;
+	text-align:center;
+	color:#555;
+	background:#fff9e6;
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:3;
+	border-left:1px solid #ffe899;
+}
+.layout a.remove:hover{
+	background:#ffe899;
+}
+.layout a.remove:before{content: "\f1f8";}
+.layout span.type{
+	line-height:22px;
+	position:absolute;
+	top:0;
+	right:20px;
+	z-index:1;
+}
+
+/* BANNER CONTROL */
+.tab_panel.banner_panel{padding-right:0;}
+td.banner_ctrl{padding:10px;}
+.banner_info{
+	background:#f3f3f3;
+	border-top:1px solid #f3f3f3;
+	border-bottom:1px solid #f9f9f9;
+	position:relative;
+	padding-left:28px;
+}
+.banner_info .display_area img{height:130px;}
+.banner_info .icon{
+	width: 28px;
+    height: 28px;
+	display:none;
+	position:absolute;
+	top:0;
+}
+.banner_info:hover .icon{	
+	display:block;
+}
+.banner_info .icon.handle{
+	left:0;
+}
+.banner_info .icon.delete{	
+	right:0;
+}
+.banner_info .icon:before{
+	color:#333;
+	font-size:16px;
+	display:block;
+	width:100%;
+	height:100%;
+	line-height:28px;
+	text-align:center;
+}
+.banner_info .icon.handle:before{content: "\f047";cursor:move;}
+.banner_info .icon.delete:before{content: "\f00d";}
+
+.banner_info .title{width:80px !important;}
+.banner_info input[type=text]{width:230px !important;}
+#b_img_link{width:150px !important;float:left;}
+.banner_info textarea{
+	width:230px !important;
+	height:35px !important;
+}
+.banner_info table{width:100%;border-bottom:1px solid transparent;}
+.banner_info .ctrl_link{float:left;margin-left:5px;line-height:32px;}
+.banner_info.hide .display_area img{opacity: 0.5;}
+
+.banner_info.over{
+	border-top: 1px dashed #ffe899;
+	border-bottom: 1px dashed #ffe899;
+    background: #fffdee;
+}
+.banner-placeholder{
+	display:block;
+	width:100%;
+	height:158px;
+	border-top:1px dashed #ccc;
+	border-bottom:1px dashed #ccc;
+}
