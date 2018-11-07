@@ -1,27 +1,5 @@
 </div>
 
-<footer>
-	EZ-MAN &bullet; 2013-<?php print date('Y');?> &bullet; Designed by 
-	<span id="lnk_contact">Kevin Xian
-		<div id="contact_info_panel">
-			<i class="arrow"></i>
-			<table border="0" cellpadding="0" cellspacing="0">
-				<tr>
-					<td class="header" colspan="2">Contact me</td>
-				</tr>
-				<tr>
-					<td class="title email"></td>
-					<td><a href="mailto:37207030@qq.com">37207030@qq.com</a></td>
-				</tr>
-				<tr>
-					<td class="title wechat"></td>
-					<td><img src="images/qrcode_kevin.jpg"></td>
-				</tr>
-			</table>
-		</div>
-	</span>
-</footer>
-
 <!--TO TOP-->
 <div class="float" id="to_top">
 	<a class="link" href="#top"></a>

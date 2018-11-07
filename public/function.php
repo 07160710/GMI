@@ -301,6 +301,27 @@ function rename_win($oldfile,$newfile){
 	return TRUE;
 }
 
+function save_log($object,$object_id,$content,$u_id=""){
+    $u_id = ($u_id!="")?$u_id:$_SESSION['u_id'];
+    $sql = "INSERT INTO gmi_log(
+				u_id,
+				object,
+				object_id,
+				content,
+				log_time
+			) VALUES(
+				'$u_id',
+				'$object',
+				'$object_id',
+				'$content',
+				'".time()."'
+			)";
+    if(!mysql_query($sql)){
+        echo "保存日志出错: ".mysql_error();
+        exit;
+    }
+}
+
 function write_log($type,$msg){
 	$fp = fopen(_ADMIN_PATH_._LOG_FOLDER_.$type."_log.txt","a+");
 	if(fwrite($fp, $msg."\r\n")){

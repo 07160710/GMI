@@ -14,7 +14,7 @@ define('_BASE_URL_','http://www.park.com/');
 define('_WF_URL_','http://wf.chinatech.org.cn/');
 define('_PORTAL_URL_','http://wf.chinatech.org.cn/portal/');
 define('_ADMIN_PATH_',str_replace('\\','/',realpath(dirname(__FILE__).'/'))."/");
-define('_ROOT_PATH_',str_replace('/backoffice','',_ADMIN_PATH_));
+define('_ROOT_PATH_',str_replace('/model','',_ADMIN_PATH_));
 define('_URL_PATH_','/');
 define('_LOG_FOLDER_','log/');
 define('_UPLOAD_FOLDER_','files/');
@@ -148,43 +148,43 @@ $news_type_arr = array(
 );
 
 $type_control = array(
-	'article' 		=> 	array(
-							'image',
-							'summary',
-							'content',
-							'document',
-							'redirect',
-							'meta_desc',
-							'meta_kwrd'
-						),
-	'article_list' 	=> 	array(
-							'summary',
-							'redirect',
-							'meta_desc',
-							'meta_kwrd'
-						),
-	'base' 			=> 	array(
-							'image',
-							'meta_desc',
-							'meta_kwrd'
-						),
-	'base_center' 	=> 	array(
-							'redirect',
-							'meta_desc',
-							'meta_kwrd'
-						),
-	'news' 			=> 	array(
-							'image',
-							'summary',
-							'content',
-							'meta_desc',
-							'meta_kwrd'
-						),
-	'guide' 		=> 	array(						
-							'content',
-							'meta_desc',
-							'meta_kwrd'
-						),
+	'article' => array(
+	    'image',
+        'summary',
+        'content',
+        'document',
+        'redirect',
+        'meta_desc',
+        'meta_kwrd'
+    ),
+	'article_list' => array(
+	    'summary',
+        'redirect',
+        'meta_desc',
+        'meta_kwrd'
+    ),
+	'base' => array(
+	    'image',
+        'meta_desc',
+        'meta_kwrd'
+    ),
+	'base_center' => array(
+	    'redirect',
+        'meta_desc',
+        'meta_kwrd'
+    ),
+	'news' => array(
+	    'image',
+        'summary',
+        'content',
+        'meta_desc',
+        'meta_kwrd'
+    ),
+	'guide' => array(
+	    'content',
+        'meta_desc',
+        'meta_kwrd'
+    ),
 );
 
 /* CONTENT */
@@ -262,6 +262,42 @@ $pub_banner_fields = array(
 	'img_title',
 	'img_desc',
 	'img_link'
+);
+
+$GLOBALS['company_fields'] = array(
+    'id',
+    'name',
+    'short_name',
+    'nature',
+    'trade',
+    'province',
+    'city',
+    'district',
+    'address',
+    'scale',
+    'registered_fund',
+    'contact',
+    'telephone',
+    'fixed_phones',
+    'email',
+    'remark',
+);
+
+$GLOBALS['company_list_fields'] = array(
+    'name'=>'公司名称#200',
+    'province'=>'省#40',
+    'city'=>'市#40',
+    'district'=>'区#60',
+    'nature' => '公司性质#80',
+    'trade' => '所属行业#80',
+    'scale' => '公司规模#80',
+    'remark'=>'企业详细#300',
+);
+
+$GLOBALS['company_filter'] = array(
+    'province',
+    'city',
+    'district',
 );
 
 /* MEDIA */
@@ -358,4 +394,71 @@ $GLOBALS['cbase_filter'] = array(
 	'batch',
 	'city',
 	'district',
+);
+$GLOBALS['category_nature'] = array(
+    1 => '国企',
+    2 => '民营',
+    3 => '合资',
+    4 => '外商独资',
+    5 => '股份制企业',
+    6 => '上市公司',
+    7 => '国家机关',
+    8 => '事业单位',
+    9 => '其它',
+);
+
+$GLOBALS['category_trade'] = array(
+    1 => '计算机软件/硬件',
+    2 => '计算机系统/维修',
+    3 =>'通信(设备/运营/服务)',
+    4 =>'互联网/电子商务',
+    6 =>'电子/半导体/集成电路',
+    7 =>'仪器仪表/工业自动化',
+    8 =>'会计/审计',
+    9 =>'金融(投资/证券',
+    10 =>'金融(银行/保险)',
+    11 => '贸易/进出口',
+    12 => '批发/零售',
+    13 => '消费品(食/饮/烟酒)',
+    14 => '服装/纺织/皮革',
+    15 => '家具/家电/工艺品/玩具',
+    16 => '办公用品及设备',
+    17 => '机械/设备/重工',
+    18 => '汽车/摩托车/零配件',
+    19 => '制药/生物工程',
+    20 => '医疗/美容/保健/卫生',
+    21 => '医疗设备/器械',
+    22 => '广告/市场推广',
+    23 => '会展/博览',
+    24 => '影视/媒体/艺术/出版',
+    25 => '印刷/包装/造纸',
+    26 => '房地产开发',
+    27 => '建筑与工程',
+    28 => '家居/室内设计/装潢',
+    29 => '物业管理/商业中心',
+    30 => '中介服务/家政服务',
+    31 => '专业服务/财会/法律',
+    32 => '检测/认证',
+    33 => '教育/培训',
+    34 => '学术/科研',
+    35 => '餐饮/娱乐/休闲',
+    36 => '酒店/旅游',
+    37 => '交通/运输/物流',
+    38 => '航天/航空',
+    39 => '能源(石油/化工/矿产)',
+    40 => '能源(采掘/冶炼/原材料)',
+    41 => '电力/水利/新能源',
+    42 => '政府部门/事业单位',
+    43 => '非盈利机构/行业协会',
+    44 => '农业/渔业/林业/牧业',
+    45 => '其他行业'
+);
+
+$GLOBALS['category_scale'] = array(
+    1 => '20人以下',
+    2 => '20-99人',
+    3 => '100-499人',
+    4 => '500-999人',
+    5 => '1000-9999人',
+    6 => '10000人以上',
 );
